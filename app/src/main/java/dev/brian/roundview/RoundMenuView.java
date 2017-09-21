@@ -2,12 +2,14 @@ package dev.brian.roundview;
 
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.graphics.BitmapShader;
 import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.RectF;
-import android.support.annotation.Nullable;
+import android.graphics.Shader;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
@@ -63,8 +65,8 @@ public class RoundMenuView extends View {
         coreX = getWidth() / 2;
         coreY = getHeight() / 2;
         roundRadius = (int) (getWidth() / 2 * radiusDistance);//计算中心圆圈半径
-
-        RectF rect = new RectF(0, 0, getWidth(), getHeight());
+        // 设置外圆的边线
+        RectF rect = new RectF(10, 10, getWidth() - 10, getHeight() - 10);
         if (roundMenus != null && roundMenus.size() > 0) {
             float sweepAngle = 360 / roundMenus.size();//每个弧形的角度
             deviationDegree = sweepAngle / 2;//其实的偏移角度，如果4个扇形的时候是X形状，而非+,设为0试试就知道什么意思了
@@ -84,6 +86,7 @@ public class RoundMenuView extends View {
 
                 //画描边
                 paint = new Paint();
+
                 paint.setAntiAlias(true);
                 paint.setStrokeWidth(roundMenu.strokeSize);
                 paint.setStyle(Paint.Style.STROKE);
@@ -268,7 +271,7 @@ public class RoundMenuView extends View {
         // public int solidColor = Color.parseColor("#6088BB");//背景颜色  上下左右的背景颜色
         public int selectSolidColor = 0x00000000;//背景颜色,默认透明
         public int strokeColor = 0x00000000;//描边颜色 内圆的圆圈颜色
-        public int strokeSize = 1;//描边的宽度,默认1
+        public int strokeSize = 10;//描边的宽度,默认1
         public Bitmap icon;//菜单的图片
         public OnClickListener onClickListener;//点击监听
         public double iconDistance = 0.63;//图标距离中心点的距离

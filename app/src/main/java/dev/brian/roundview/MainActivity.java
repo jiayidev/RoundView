@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
          */
         roundMenu.selectSolidColor = Color.parseColor("#548CFF");
         roundMenu.strokeColor = Color.parseColor("#F1F6F5");
-        roundMenu.icon = BitmapFactory.decodeResource(getResources(), R.drawable.btn_wrintright);
+        roundMenu.icon = BitmapFactory.decodeResource(getResources(), R.drawable.btn_big_right2);
         roundMenu.onClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
          */
         roundMenu.selectSolidColor = Color.parseColor("#548CFF");
         roundMenu.strokeColor = Color.parseColor("#F1F6F5");
-        roundMenu.icon = BitmapFactory.decodeResource(getResources(), R.drawable.btn_wrintright);
+        roundMenu.icon = BitmapFactory.decodeResource(getResources(), R.drawable.btn_big_right2);
         roundMenu.onClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
          */
         roundMenu.selectSolidColor = Color.parseColor("#548CFF");
         roundMenu.strokeColor = Color.parseColor("#F1F6F5");
-        roundMenu.icon = BitmapFactory.decodeResource(getResources(), R.drawable.btn_wrintright);
+        roundMenu.icon = BitmapFactory.decodeResource(getResources(), R.drawable.btn_big_right2);
         roundMenu.onClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
          */
         roundMenu.selectSolidColor = Color.parseColor("#548CFF");
         roundMenu.strokeColor = Color.parseColor("#F1F6F5");
-        roundMenu.icon = BitmapFactory.decodeResource(getResources(), R.drawable.btn_wrintright);
+        roundMenu.icon = BitmapFactory.decodeResource(getResources(), R.drawable.btn_big_right2);
         roundMenu.onClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -85,9 +85,9 @@ public class MainActivity extends AppCompatActivity {
          * 第二个参数:内圆按下去的颜色
          * 第三个参数:内圆外边的边线颜色
          */
-        round_view.setCoreMenu(Color.parseColor("#00000000"),
+        round_view.setCoreMenu(Color.parseColor("#8EC1FA"),
                 Color.parseColor("#548CFF"), Color.parseColor("#F1F6F5")
-                , 1, 0.43, BitmapFactory.decodeResource(getResources(), R.drawable.btn_wrint_stop), new View.OnClickListener() {
+                , 10, 0.30, BitmapFactory.decodeResource(getResources(), R.drawable.btn_big_stop), new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         Toast.makeText(MainActivity.this, "点击了中间", Toast.LENGTH_SHORT).show();
